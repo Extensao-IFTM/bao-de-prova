@@ -86,3 +86,9 @@ p {
     margin-top: 25rem;
     background-color: #f4f4f9;
 }
+
+#banner img {
+    width: 300px;
+    height: auto;
+    display: block;
+}
