@@ -1,6 +1,6 @@
 /* Define uma fonte padrão e cor de fundo para toda a página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
@@ -24,11 +24,29 @@ main {
     align-items: center;
 }
 
+#home{
+    display: flex;
+    min-height: calc(100hv - 167px);
+}
+
+#cta{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+
 /* -------------------------------------------------------------------------- */
 /* ESTILOS DE CONTEÚDO                                                       */
 /* -------------------------------------------------------------------------- */
 
-h1, h2 {
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-style: normal;
     color: #2980b9;
 }
 
