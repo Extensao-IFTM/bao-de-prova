@@ -1,0 +1,76 @@
+body {
+  font-family: Roboto, sans-serif;
+  background: #d3edef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+#questão, #resultado {
+  background: #f0eadf;
+  padding: 20px;
+  border-radius: 16px;
+  width: 450px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.enunciado {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #3c016b;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+li {
+  background: white;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #a88aed;
+  transition: 0.3s;
+}
+li.selecionado {
+  background: #a88aed;
+  color: white;
+}
+.botoes {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#voltar {
+  background: #a88aed;
+  color: white;
+}
+#proxima {
+  background: #03675b;
+  color: white;
+}
+button:hover {
+  opacity: 0.9;
+}
+#resultado h2 {
+  font-family: "Baloo 2", cursive;
+  color: #3c016b;
+}
+.correto {
+  color: green;
+  font-weight: bold;
+}
+.errado {
+  color: red;
+  font-weight: bold;
+}
