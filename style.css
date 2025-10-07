@@ -1,7 +1,17 @@
+/*Palheta de cores*/
+
+:root {
+  --roxo: #3c016b;
+  --roxo-claro: #a88aed;
+  --verde: #03675b;
+  --offwhite: #f0eadf;
+  --azul-claro: #d3edef;
+}
+
 /* Define uma fonte padrão e cor de fundo para toda a página */
 body {
     font-family: "Montserrat", sans-serif;
-    background-color: #f4f4f9;
+    background-color: --offwhite;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -13,7 +23,7 @@ body {
 /* -------------------------------------------------------------------------- */
 
 header {
-    background-color: #f0eadf;
+    background-color: var(--offwhite);
     align-items: center;
     justify-content: space-between;
 }
@@ -43,7 +53,7 @@ header {
 }
 
 .item_menu.active{
-    border-bottom: 3px solid #a88aed;
+    border-bottom: 3px solid --roxo-claro;
 }
 
 #botao-padrao{
@@ -51,7 +61,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #a88aed;
+    background-color: var(--roxo-claro);
     border-radius: 12px;
     padding: 10px 14px;
     font-weight: 600;
@@ -86,7 +96,50 @@ main {
 /* -------------------------------------------------------------------------- */
 /* ESTILOS DE CONTEÚDO                                                       */
 /* -------------------------------------------------------------------------- */
+#home {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--offwhite);
+    padding: 0 5%;
+}
 
+.forma-circular2{
+    position: absolute;
+    left: -200px;
+    margin-bottom: -100px;
+    top: -150px;
+    width: 400px;
+    height: 300px;
+    background: var(--verde);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.forma-circular {
+    position: absolute;
+    left: -300px;
+    top: -90px;
+    width: 700px;
+    height: 550px;
+    background: var(--roxo);
+    border-radius: 50%;
+}
+
+.forma-curva {
+  position: absolute;
+  bottom: -100px;
+  right: -150px;
+  width: 500px;
+  height: 300px;
+  background: var(--roxo);
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  z-index: 1;
+}
 
 h1 {
     font-family: "Montserrat", sans-serif;
@@ -130,7 +183,7 @@ p {
 #sobre-nos {
     padding: 1rem;
     margin-top: 25rem;
-    background-color: #f4f4f9;
+    background-color: var(--azul-claro);
 }
 
 #banner img {
