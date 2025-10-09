@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,41 +10,38 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Link do repositório de icones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--Fontes do projeto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <!-- <h1 id="home">Bem-vindo ao Bom de Prova!</h1>
-        <p>Sua plataforma para preparação eficaz para o ENEM.</p> -->
-
         <nav id="menu">
             <img src="imagens/Logo_Rev_001.png" id="logo"></img>
-
             <ul id="lista-menu">
-                <li class="item_menu active" >
+                <li class="item_menu active">
                     <a href="#home">Início</a>
                 </li>
-                
+
                 <li class="item_menu">
                     <a href="#sobre">Sobre Nós</a>
                 </li>
 
             </ul>
-
-                <button id="botao-padrao">
-                    Login/Cadastro
-                </button>
-            
+            <button id="botao-padrao" onclick="window.location.href='loginTeste.html'">
+                Login/Cadastro
+            </button>
         </nav>
     </header>
-    
-    <main>
 
+    <main>
         <section id="home">
             <div class="forma-circular"></div>
             <div class="forma-circular2"></div>
@@ -60,32 +58,27 @@
                     <a href="simulado.html" class="botao">Inscreva-se</a>
                 </div>
 
-
             </div>
 
             <div id="banner">
                 <img src="imagens/banner.jpg" alt="pessoa-estudando">
-
             </div>
         </section>
 
-        
-        <h2>Pronto para iniciar os estudos?</h2>
-        <p>Clique no botão abaixo e para receber uma motivação!</p>
-
-        <button class="btn-motivacao" onclick="gerarMotivacao()">Receber Motivação</button>
-
-        <p id="mensagem"></p>
-        
-        <p>LUQUINHA TESTE</p>
-
         <section id="sobre-nos">
             <h2>Sobre Nós</h2>
-            <p>O Bom de Prova é uma plataforma dedicada a ajudar estudantes a se prepararem para o Exame Nacional do Ensino Médio (ENEM). Oferecemos uma variedade de recursos, incluindo simulados, videoaulas e materiais de estudo.</p>
+            <p>O Bom de Prova é uma plataforma dedicada a ajudar estudantes a se prepararem para o Exame Nacional do
+                Ensino Médio (ENEM). Oferecemos uma variedade de recursos, incluindo simulados, videoaulas e materiais
+                de estudo.</p>
         </section>
     </main>
 
     <!-- Link para o arquivo JavaScript -->
-    <script src="script.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        verificarAutenticacao();
+    </script>
 </body>
+
 </html>

@@ -1,28 +1,44 @@
-clear
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Simulado - Bom de Prova</title>
   <link rel="stylesheet" href="style_simulado.css">
 </head>
+
 <body>
 
-<div id="questão">
-  <div class="enunciado" id="enunciado">Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor</div>
+  <div id="questão">
+    <div class="enunciado" id="enunciado">Carregando questão...</div>
     <ul id="alternativas"></ul>
-  <div class="botoes">
-    <button id="voltar">Voltar</button>
-    <button id="proxima">Próxima</button>
+
+    <div class="botoes">
+      <button id="voltar" onclick="window.history.back()">Sair</button>
+      <button id="anterior" onclick="questaoAnterior()">Anterior</button>
+      <button id="verificar" onclick="verificarResposta()">Verificar</button>
+      <button id="proxima" onclick="proximaQuestao()">Próxima</button>
+    </div>
   </div>
-</div>
 
-<div id="resultado" style="display:none;">
-  <h2>Resultado do Simulado </h2>
-  <div id="resumo"></div>
-  <p><strong>Acertos:</strong> <span id="totalAcertos"></span> de <span id="totalQuestoes"></span></p>
-</div>
+  <div id="resultado" style="display:none;">
+    <h2>Resultado do Simulado</h2>
+    <div id="resumo"></div>
+    <p><strong>Acertos:</strong> <span id="totalAcertos"></span> de <span id="totalQuestoes"></span></p>
+    <button onclick="window.location.href='index.html'">Voltar ao Início</button>
+  </div>
 
-<script src="script.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/simulado.js"></script>
+  <script>
+    // Verificar se está logado
+    verificarAutenticacao(true);
+
+    // Carregar todas as questões
+    carregarTodasQuestoes();
+  </script>
+
 </body>
+
 </html>
