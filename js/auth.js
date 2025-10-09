@@ -51,7 +51,7 @@ function atualizarInfoUsuario() {
 // Verificar login ao carregar página
 function verificarAutenticacao(redirecionarSeNaoLogado = false) {
     if (!estaLogado() && redirecionarSeNaoLogado) {
-        window.location.href = 'loginTeste.html';
+        window.location.href = 'login.html';
         return false;
     }
     

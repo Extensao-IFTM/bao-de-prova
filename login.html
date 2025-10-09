@@ -27,6 +27,37 @@
 
       <button type="submit" class="btn-login">Entrar</button>
     </form>
+
+    <div id="message" class="message"></div>
   </div>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const nome = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const divMensagem = document.getElementById('message');
+
+      try {
+        divMensagem.textContent = 'Entrando...';
+        divMensagem.className = 'message info';
+
+        await fazerLogin(nome, email);
+
+        divMensagem.textContent = 'Login realizado com sucesso!';
+        divMensagem.className = 'message success';
+
+        setTimeout(() => {
+          window.location.href = 'simulado.html';
+        }, 1000);
+
+      } catch (erro) {
+        divMensagem.textContent = erro.message || 'Erro ao fazer login';
+        divMensagem.className = 'message error';
+      }
+    });
+  </script>
 </body>
 </html>
