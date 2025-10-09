@@ -1,0 +1,118 @@
+/* Paleta base */
+:root {
+  --roxo: #3c016b;
+  --roxo-claro: #a88aed;
+  --offwhite: #f0eadf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  background: var(--roxo) url('bg-login.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#imagem{
+    position: absolute;
+    z-index: -1;
+}
+
+
+/* Container principal */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Caixa de login */
+.login-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.login-box h1 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--roxo);
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: var(--roxo);
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--roxo-claro);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--roxo);
+}
+
+/* Botão de login */
+.btn-login {
+  background: var(--roxo);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: var(--roxo-claro);
+}
+
+/* Texto de cadastro */
+.register-text {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.register-text a {
+  color: var(--roxo);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
