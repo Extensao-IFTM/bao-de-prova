@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - Bom de Prova</title>
   <link rel="stylesheet" href="../css/style_login.css" />
 </head>
+
 <body>
-    <div id="imagem">
-        <img src="../imagens/Background .png" alt="Background">
-    </div>
+  <div id="imagem">
+    <img src="../imagens/Background .png" alt="Background">
+  </div>
+  
   <div class="login-container">
     <form id="login-form" class="login-box">
       <h1>Bom de Prova</h1>
@@ -30,6 +33,7 @@
 
     <div id="message" class="message"></div>
   </div>
+
   <script src="../js/api.js"></script>
   <script src="../js/auth.js"></script>
   <script>
@@ -37,7 +41,7 @@
       e.preventDefault();
 
       const nome = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
+      const email = document. getElementById('email').value;
       const divMensagem = document.getElementById('message');
 
       try {
@@ -60,4 +64,5 @@
     });
   </script>
 </body>
+
 </html>

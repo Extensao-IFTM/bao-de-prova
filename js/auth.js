@@ -3,7 +3,7 @@ function estaLogado() {
     return localStorage.getItem('idUsuario') !== null;
 }
 
-// Pegar ID do usuário logado
+// Pegar ID do usuário logado -- simulado.js
 function obterIdUsuarioAtual() {
     return localStorage.getItem('idUsuario');
 }
@@ -14,7 +14,7 @@ function obterUsuarioAtual() {
     return dadosUsuario ? JSON.parse(dadosUsuario) : null;
 }
 
-// Fazer login/cadastro
+// Fazer login/cadastro -- login.html
 async function fazerLogin(nome, email) {
     try {
         const usuario = await criarUsuario(nome, email);
@@ -30,6 +30,7 @@ async function fazerLogin(nome, email) {
 }
 
 // Fazer logout
+// NÃO USADA
 function fazerLogout() {
     localStorage.removeItem('idUsuario');
     localStorage.removeItem('dadosUsuario');
@@ -48,7 +49,7 @@ function atualizarInfoUsuario() {
     });
 }
 
-// Verificar login ao carregar página
+// Verificar login ao carregar página -- index.html e simulado.html
 function verificarAutenticacao(redirecionarSeNaoLogado = false) {
     if (!estaLogado() && redirecionarSeNaoLogado) {
         window.location.href = 'pages/login.html';

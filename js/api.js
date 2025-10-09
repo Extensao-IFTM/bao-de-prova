@@ -24,6 +24,7 @@ async function buscarAPI(endpoint, opcoes = {}) {
 }
 
 // Funções de Questões
+// NÃO USADA
 async function buscarQuestaoAleatoria(categoria = null) {
     const url = categoria 
         ? `/questions/random?category=${encodeURIComponent(categoria)}`
@@ -31,11 +32,12 @@ async function buscarQuestaoAleatoria(categoria = null) {
     return await buscarAPI(url);
 }
 
+// NÃO USADA
 async function buscarQuestaoPorId(id) {
     return await buscarAPI(`/questions/${id}`);
 }
 
-// Funções de Usuários
+// Funções de Usuários auth.js
 async function criarUsuario(nome, email) {
     return await buscarAPI('/users', {
         method: 'POST',
@@ -43,11 +45,12 @@ async function criarUsuario(nome, email) {
     });
 }
 
+// NÃO USADA
 async function buscarUsuarioPorId(id) {
     return await buscarAPI(`/users/${id}`);
 }
 
-// Funções de Respostas
+// Funções de Respostas - simulado.js
 async function enviarResposta(idUsuario, idQuestao, alternativaSelecionada, estaCorreto) {
     return await buscarAPI('/userdata', {
         method: 'POST',
@@ -60,10 +63,12 @@ async function enviarResposta(idUsuario, idQuestao, alternativaSelecionada, esta
     });
 }
 
+// NÃO USADA
 async function buscarEstatisticasUsuario(idUsuario) {
     return await buscarAPI(`/userdata/user/${idUsuario}/stats`);
 }
 
+// NÃO USADA
 async function buscarRanking() {
     return await buscarAPI('/userdata/ranking');
 }
