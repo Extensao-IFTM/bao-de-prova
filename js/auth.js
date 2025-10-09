@@ -33,7 +33,7 @@ async function fazerLogin(nome, email) {
 function fazerLogout() {
     localStorage.removeItem('idUsuario');
     localStorage.removeItem('dadosUsuario');
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 }
 
 // Atualizar informações do usuário na página
@@ -51,7 +51,7 @@ function atualizarInfoUsuario() {
 // Verificar login ao carregar página
 function verificarAutenticacao(redirecionarSeNaoLogado = false) {
     if (!estaLogado() && redirecionarSeNaoLogado) {
-        window.location.href = 'login.html';
+        window.location.href = 'pages/login.html';
         return false;
     }
     
