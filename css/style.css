@@ -131,6 +131,7 @@ main {
     display: flex;
     height: 110%;
     width: 110%;
+    left: 100px;
     justify-content: center;
     align-items: center;
     background-color: var(--offwhite);
@@ -242,6 +243,8 @@ p {
 
 #sobre-nos {
     padding: 1rem;
-    margin-top: 25rem;
-    background-color: var(--azul-claro);
+}
+
+#sobre-nos h2, p {
+    color:#3c016b;
 }

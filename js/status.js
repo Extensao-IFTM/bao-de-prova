@@ -51,6 +51,6 @@ function atualizarEstatisticas(stats) {
 
 // Carregar dados ao iniciar a página
 document.addEventListener('DOMContentLoaded', () => {
-    verificarAutenticacao(true);
-    carregarDadosUsuario();
+    // verificarAutenticacao(true);
+    // carregarDadosUsuario();
 });
