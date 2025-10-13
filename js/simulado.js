@@ -25,7 +25,7 @@ async function carregarTodasQuestoes() {
         exibirQuestao(todasQuestoes[indiceQuestaoAtual]);
         
     } catch (erro) {
-        alert('Erro ao carregar questões: ' + erro.message);
+        alert('Erro ao carregar questões 123: ' + erro.message);
     } finally {
         mostrarCarregador(false);
     }
