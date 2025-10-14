@@ -5,13 +5,6 @@ var emailUsuarioInput = document.getElementById("email-usuario");
 
 async function carregarDadosUsuario() {
     try {
-        // Verificar se está logado
-        if (!idUsuario) {
-            alert('Usuário não autenticado!');
-            window.location.href = 'login.html';
-            return;
-        }
-
         // Buscar dados do usuário do localStorage
         const usuario = obterUsuarioAtual();
         
@@ -51,6 +44,6 @@ function atualizarEstatisticas(stats) {
 
 // Carregar dados ao iniciar a página
 document.addEventListener('DOMContentLoaded', () => {
-    // verificarAutenticacao(true);
-    // carregarDadosUsuario();
+    verificarAutenticacao(true);
+    carregarDadosUsuario();
 });
