@@ -41,26 +41,37 @@
       e.preventDefault();
 
       const nome = document.getElementById('name').value;
-      const email = document. getElementById('email').value;
+      const email = document.getElementById('email').value;
       const divMensagem = document.getElementById('message');
+      const btnLogin = document.querySelector('.btn-login');
 
       try {
+        // Estado de carregamento
+        btnLogin.classList.add('loading');
+        btnLogin.disabled = true;
         divMensagem.textContent = 'Entrando...';
         divMensagem.className = 'message info';
 
         await fazerLogin(nome, email);
 
-        alert('Login realizado com sucesso!');
-
-        divMensagem.textContent = 'Login realizado com sucesso!';
+        // Remover estado de carregamento
+        btnLogin.classList.remove('loading');
+        
+        // Mostrar sucesso
+        divMensagem.textContent = '✓ Login realizado com sucesso! Redirecionando...';
         divMensagem.className = 'message success';
 
         setTimeout(() => {
           window.location.href = 'simulado.html';
-        }, 1000);
+        }, 1500);
 
       } catch (erro) {
-        divMensagem.textContent = erro.message || 'Erro ao fazer login';
+        // Remover estado de carregamento
+        btnLogin.classList.remove('loading');
+        btnLogin.disabled = false;
+        
+        // Mostrar erro
+        divMensagem.textContent = '✗ ' + (erro.message || 'Erro ao fazer login');
         divMensagem.className = 'message error';
       }
     });
