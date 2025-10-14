@@ -1,0 +1,250 @@
+#home-texto, 
+#home h1, 
+#home h2, 
+#home p, 
+#botao-cta,
+.forma-curva {
+  position: relative;
+  z-index: 5; /* Fica acima das formas */
+}
+
+/*Palheta de cores*/
+
+:root {
+  --roxo: #3c016b;
+  --roxo-claro: #a88aed;
+  --verde: #03675b;
+  --offwhite: #f0eadf;
+  --azul-claro: #d3edef;
+}
+
+/* Define uma fonte padrão e cor de fundo para toda a página */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: --offwhite;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ESTILOS DO LAYOUT                                                         */
+/* -------------------------------------------------------------------------- */
+
+header {
+    background-color: var(--offwhite);
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 10%;
+    margin-left: 30px;
+}
+
+#lista-menu{
+    margin-left: -50px;
+    display: flex;
+    list-style: none;
+    gap:60px;
+}
+
+.item_menu a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 130%;
+}
+
+.item_menu.active{
+    border-bottom: 3px solid --roxo-claro;
+}
+
+#botao-padrao{
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--roxo-claro);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,00.1);
+    cursor: pointer;
+    margin-right: 60px;
+}
+
+#botao-padrao:hover
+{
+    padding: 15px 21px;
+}
+
+main {
+    align-items: center;
+}
+
+
+
+#cta{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* ESTILOS DE CONTEÚDO                                                       */
+/* -------------------------------------------------------------------------- */
+#home {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--roxo);
+    padding: 0 5%;
+}
+#home-conteudo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 1100px;
+  width: 100%;
+  margin: 0 0;
+}
+
+#home-texto {
+  flex: 1; /* ocupa metade da largura */
+  max-width: 450px;
+  z-index: 3;
+}
+
+#banner {
+    display: flex;
+    height: 110%;
+    width: 110%;
+    left: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--offwhite);
+}
+
+#banner img {
+  width: 100%;
+  height: 100%;
+  left: 90px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+h1, h2{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900px;
+    font-style: normal;
+    color: var(--azul-claro);
+    z-index: 1;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--offwhite);
+}
+
+#botao-cta{
+    background: var(--roxo-claro);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.home-texto {
+   max-width: 400px;
+  color: var(--offwhite);
+  z-index: 5;
+}
+
+.forma-circular2{
+    position: absolute;
+    left: -200px;
+    margin-bottom: -100px;
+    top: -150px;
+    width: 500px;
+    height: 400px;
+    background: var(--verde);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.forma-curva {
+  position: absolute;
+  bottom: -100px;
+  right: -150px;
+  width: 500px;
+  height: 300px;
+  background: var(--roxo);
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  z-index: 2;
+}
+
+.forma-circular {
+    position: absolute;
+    left: 170px;
+    top: -90px;
+    width: 600px;
+    height: 750px;
+    background: var(--roxo);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* ESTILOS DE BOTÕES E INTERATIVIDADE                                        */
+/* -------------------------------------------------------------------------- */
+
+.btn-motivacao {
+    display: inline-block;
+    background-color: #27ae60;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-motivacao:hover {
+    background-color: #219150;
+}
+/* -------------------------------------------------------------------------- */
+
+#mensagem {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#sobre-nos {
+    padding: 1rem;
+}
+
+#sobre-nos h2, p {
+    color:#3c016b;
+}

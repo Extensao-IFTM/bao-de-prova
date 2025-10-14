@@ -1,0 +1,159 @@
+:root {
+  --roxo: #3c016b;
+  --roxo-claro: #a88aed;
+  --verde: #03675b;
+  --offwhite: #f0eadf;
+  --azul-claro: #d3edef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--roxo);
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  background-color: var(--offwhite);
+  color: var(--roxo);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cabecalho .logo img {
+    width: 10%;
+}
+
+.cabecalho nav a {
+  color: var(--verde);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.cabecalho nav a:hover {
+  text-decoration: underline;
+}
+
+.cabecalho .sair {
+  background: var(--roxo-claro);
+  color: var(--offwhite);
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.cabecalho .sair:hover {
+    background: var(--verde);
+}
+
+/* Container principal */
+.container-status {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    }
+
+/* Perfil */
+.perfil {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.info-usuario h2 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--roxo);
+    font-size: 24px;
+}
+
+.info-usuario .email-usuario {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Estatísticas */
+.estatisticas {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  font-size: 18px;
+  color: var(--roxo);
+  margin-bottom: 10px;
+}
+
+.numero {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.acertos {
+  color: var(--verde);
+  background-color: #8bf0c1;
+  border-radius: 20px;
+}
+
+.erros {
+  color: #ac1c1c;
+  background-color: #f09191;
+  border-radius: 20px;
+}
+
+/* Informação sobre pontuação */
+.info-pontuacao {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.info-pontuacao p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.info-pontuacao p:first-child {
+  color: var(--roxo);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
