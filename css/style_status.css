@@ -136,3 +136,24 @@ body {
   background-color: #f09191;
   border-radius: 20px;
 }
+
+/* Informação sobre pontuação */
+.info-pontuacao {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.info-pontuacao p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.info-pontuacao p:first-child {
+  color: var(--roxo);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
