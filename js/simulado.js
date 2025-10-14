@@ -2,6 +2,7 @@ let todasQuestoes = []; // Array para armazenar todas as questões
 let indiceQuestaoAtual = 0; // Índice da questão atual
 let questoesRespondidas = 0;
 let respostasCorretas = 0;
+let questaoAtualRespondida = false; // Controle se a questão atual foi respondida
 
 // Carregar todas as questões da API
 async function carregarTodasQuestoes() {
@@ -25,7 +26,8 @@ async function carregarTodasQuestoes() {
         exibirQuestao(todasQuestoes[indiceQuestaoAtual]);
         
     } catch (erro) {
-        alert('Erro ao carregar questões: ' + erro.message);
+        // alert('Erro ao carregar questões: ' + erro.message);
+        alert('Erro ao carregar questões, verifique a sua conexão com API... ');
     } finally {
         mostrarCarregador(false);
     }
@@ -56,6 +58,9 @@ function exibirQuestao(questao) {
         `;
         containerAlternativas.appendChild(li);
     });
+    
+    // Resetar flag de questão respondida ao mudar de questão
+    questaoAtualRespondida = false;
     
     // Atualizar contador de questões
     atualizarContadorQuestoes();
@@ -109,10 +114,17 @@ async function verificarResposta() {
         questoesRespondidas++;
         if (estaCorreto) respostasCorretas++;
         
+        // Marcar questão atual como respondida
+        questaoAtualRespondida = true;
+        
         mostrarFeedback(estaCorreto);
         
         // Desabilitar botão verificar após responder
         document.getElementById('verificar').disabled = true;
+        
+        // Habilitar botão próxima/finalizar após responder
+        const btnProxima = document.getElementById('proxima');
+        btnProxima.disabled = false;
         
     } catch (erro) {
         console.error('Erro ao salvar resposta:', erro);
@@ -162,6 +174,10 @@ function habilitarBotoes() {
     
     // Atualizar estado do botão "Próxima"
     const btnProxima = document.getElementById('proxima');
+    
+    // Desabilitar botão próxima/finalizar até que a questão seja respondida
+    btnProxima.disabled = !questaoAtualRespondida;
+    
     if (indiceQuestaoAtual >= todasQuestoes.length - 1) {
         btnProxima.textContent = 'Finalizar';
         btnProxima.onclick = finalizarSimulado;
@@ -178,14 +194,6 @@ function proximaQuestao() {
         exibirQuestao(todasQuestoes[indiceQuestaoAtual]);
     } else {
         finalizarSimulado();
-    }
-}
-
-// Questão anterior
-function questaoAnterior() {
-    if (indiceQuestaoAtual > 0) {
-        indiceQuestaoAtual--;
-        exibirQuestao(todasQuestoes[indiceQuestaoAtual]);
     }
 }
 
@@ -206,6 +214,12 @@ function mostrarCarregador(mostrar) {
 
 // Finalizar simulado
 function finalizarSimulado() {
+    // Verificar se todas as questões foram respondidas
+    if (questoesRespondidas < todasQuestoes.length) {
+        alert(`Você precisa responder todas as questões antes de finalizar!\nQuestões respondidas: ${questoesRespondidas}/${todasQuestoes.length}`);
+        return;
+    }
+    
     document.getElementById('questão').style.display = 'none';
     document.getElementById('resultado').style.display = 'block';
     

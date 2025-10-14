@@ -14,8 +14,7 @@
     <ul id="alternativas"></ul>
 
     <div class="botoes">
-      <button id="voltar" onclick="window.history.back()">Sair</button>
-      <button id="anterior" onclick="questaoAnterior()">Anterior</button>
+      <button id="voltar" onclick="window.location.href='../index.html'">Sair</button>
       <button id="verificar" onclick="verificarResposta()">Verificar</button>
       <button id="proxima" onclick="proximaQuestao()">Próxima</button>
     </div>
@@ -33,10 +32,13 @@
   <script src="../js/simulado.js"></script>
   <script>
     // Verificar se está logado
-    verificarAutenticacao(true);
-
-    // Carregar todas as questões
-    carregarTodasQuestoes();
+    let usuarioAutenticado = verificarAutenticacao(true);
+    if(usuarioAutenticado)
+    {
+      // Carregar todas as questões
+      carregarTodasQuestoes();
+    }
+    
   </script>
 
 </body>
